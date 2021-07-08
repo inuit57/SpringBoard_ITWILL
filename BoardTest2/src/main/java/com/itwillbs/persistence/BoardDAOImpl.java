@@ -31,7 +31,7 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 
 	@Override
-	public BoardVO read(int bno) throws Exception {
+	public BoardVO read(Integer bno) throws Exception {
 		return sqlsession.selectOne(namespace+".read", bno);
 	}
 
@@ -41,7 +41,7 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 
 	@Override
-	public void delete(int bno) throws Exception {
+	public void delete(Integer bno) throws Exception {
 		sqlsession.delete(namespace+".delete" , bno); 
 	}
 	
