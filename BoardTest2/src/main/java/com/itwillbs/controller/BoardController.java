@@ -102,7 +102,25 @@ public class BoardController {
 //	}
 	
 	
+	@RequestMapping(value="/modify" , method =RequestMethod.GET )
+	public void updateGET(@RequestParam int bno , Model model) throws Exception{
+		System.out.println("C : /read 주소에서 수정동작 호출");
+		
+		System.out.println("C : bno "  + bno);
+		
+		//서비스에서 글 번호에 해당하는 글 정보 가져오기 
+		
+		model.addAttribute("vo", service.read(bno)) ; 
+		
+	}
 
+	@RequestMapping(value= "/modify" , method= RequestMethod.POST)
+	public String updatePOST(BoardVO vo) throws Exception{
+		System.out.println("C: 정보 수정 처리 updatePOST() 호출 ");
+		
+		service.update(vo); 
+		return "redirect:/board/listAll"; 
+	}
 	
 	
 	

@@ -34,6 +34,11 @@ public class BoardDAOImpl implements BoardDAO {
 	public BoardVO read(int bno) {
 		return sqlsession.selectOne(namespace+".read", bno);
 	}
+
+	@Override
+	public void update(BoardVO vo) {
+		sqlsession.update(namespace+".update" , vo); 
+	}
 	
 	
 	

@@ -32,6 +32,11 @@ public class BoardServiceImpl implements BoardService{
 
 		return dao.read(bno); 
 	}
+
+	@Override
+	public void update(BoardVO vo) {
+		dao.update(vo); 
+	}
 	
 	
 

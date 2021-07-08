@@ -10,5 +10,7 @@ public interface BoardDAO {
 
 	public List<BoardVO> listALL() throws Exception;
 
-	public BoardVO read(int bno); 
+	public BoardVO read(int bno);
+
+	public void update(BoardVO vo); 
 }
