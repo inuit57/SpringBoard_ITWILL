@@ -3,13 +3,9 @@
 
   <%@ include file="../include/header.jsp" %>
 
-  <h1>views/board/regist.jsp</h1>
-  <h2> 글쓰기 </h2>
+  <h1>views/board/read.jsp</h1>
+  <h2> 글내용 </h2>
   
-  <!-- 
-     action 페이지 정보 없음
-     => 다시 자기자신의 주소 호출
-   -->
   <form role="form" action="./regist" method="post">
       <div class="box-body">
         <div class="form-group">
@@ -28,10 +24,6 @@
 
       </div>
       <!-- /.box-body -->
-
-<!--       <div class="box-footer"> -->
-<!--         <button type="submit" class="btn btn-primary">글쓰기</button> -->
-<!--       </div> -->
     </form>
   
   <%@ include file="../include/footer.jsp" %>
