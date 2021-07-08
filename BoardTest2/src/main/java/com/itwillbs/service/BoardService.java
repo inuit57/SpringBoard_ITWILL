@@ -11,7 +11,9 @@ public interface BoardService {
 
 	public List<BoardVO> listALL() throws Exception;
 
-	public BoardVO read(int bno);
+	public BoardVO read(int bno) throws Exception;
 
-	public void update(BoardVO vo);  
+	public void update(BoardVO vo) throws Exception;
+
+	public void delete(int bno) throws Exception;  
 }

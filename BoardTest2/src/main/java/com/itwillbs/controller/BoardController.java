@@ -115,10 +115,23 @@ public class BoardController {
 	}
 
 	@RequestMapping(value= "/modify" , method= RequestMethod.POST)
-	public String updatePOST(BoardVO vo) throws Exception{
+	public String updatePOST(BoardVO vo, RedirectAttributes rttr) throws Exception{
 		System.out.println("C: 정보 수정 처리 updatePOST() 호출 ");
 		
-		service.update(vo); 
+		service.update(vo);
+		
+		rttr.addFlashAttribute("result", "success"); 
+		return "redirect:/board/listAll"; 
+	}
+	
+	@RequestMapping(value="/delete" , method = RequestMethod.POST)
+	public String deletePOST(@RequestParam int bno , RedirectAttributes rttr) throws Exception{
+		System.out.println("C : 정보 삭제 처리 ");
+		
+		service.delete(bno); 
+		
+		rttr.addFlashAttribute("result" , "success"); 
+		
 		return "redirect:/board/listAll"; 
 	}
 	

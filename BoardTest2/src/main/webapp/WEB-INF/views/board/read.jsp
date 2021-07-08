@@ -36,7 +36,7 @@
       <div class="box-footer">
         <button class="btn btn-warning">수정하기</button>
         <button class="btn btn-danger">삭제하기</button>
-        <button  class="btn btn-primary">목록으로</button>
+        <button class="btn btn-primary">목록으로</button>
        </div>
   	
   <script>
@@ -63,7 +63,9 @@
   		
   		//삭제하기 버튼 클릭시
   		$(".btn-danger").click(function(){
-  			location.href="/board/listAll";
+  			formObj.attr("action","/board/delete"); 
+  			formObj.attr("method" , "post"); 
+  			formObj.submit();
   		}); 
   	}) ; 
   

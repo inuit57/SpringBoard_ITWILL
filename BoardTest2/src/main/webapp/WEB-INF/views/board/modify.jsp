@@ -50,7 +50,7 @@
   		});
   		
   		//수정하기 버튼 클릭시
-  		$(".btn-warning").click(function(){
+  		$(".btn-warning").click(function(){ 
   			formObj.attr("action","/board/modify"); 
   			formObj.attr("method" , "post"); 
   			formObj.submit(); 
