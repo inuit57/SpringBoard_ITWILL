@@ -17,8 +17,8 @@
 			<tr>
 				<td>${boardVO.bno }</td>
 				<td>
-<!-- 				<a href="/board/read?bno=${boardVO.bno }"> -->
-				<a href="/board/read/${boardVO.bno}">
+				<a href="/board/read?bno=${boardVO.bno }">
+<%-- 				<a href="/board/read/${boardVO.bno}"> --%>
 				${boardVO.title }
 				</a>
 				</td>

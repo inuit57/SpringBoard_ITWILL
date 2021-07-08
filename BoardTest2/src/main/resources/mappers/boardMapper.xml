@@ -14,6 +14,9 @@
   	select * from tbl_board order by bno desc 
   </select>
   
+  <select id="read" resultType="BoardVO">
+  	select * from tbl_board where bno = #{bno}
+  </select>
 
 </mapper>  
 

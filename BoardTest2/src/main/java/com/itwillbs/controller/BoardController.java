@@ -63,7 +63,7 @@ public class BoardController {
 	
 	
 	@RequestMapping(value="/read" , method = RequestMethod.GET)
-	public void readGET(@RequestParam("bno") int bno) throws Exception{
+	public void readGET(@RequestParam("bno") int bno , Model model) throws Exception{
 		
 		// Model : 컨트롤러가 뷰에 정보를 전달하는 객체 ( Map의 형태로 저장) 
 		
@@ -72,11 +72,14 @@ public class BoardController {
 		// => DTO / VO 객체를 주로 사용 
 		
 		// @RequestParam : request.getParameter() 와 동일 
+		// 기존에 사용하던 request.getParameter() 함수는 리턴값이 String이어서 형변환을 해줘야 하였지만
+		// 이것은 자동으로 형변환을 수행해준다. (문자열, 숫자, 날짜 )  
 		
 		System.out.println("C : readGET() 호출");
 		// 전달 정보 bno 저장 
 		System.out.println("C : bno = " + bno);
 		
+		model.addAttribute("boardVO" ,service.read(bno)); 
 		// 서비스에 글 본문 내용을 가져오는 메소드 
 		
 		// 페이지 이동 

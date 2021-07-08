@@ -8,5 +8,7 @@ public interface BoardDAO {
 	// 글쓰기(create)
 	public void create(BoardVO vo) throws Exception;
 
-	public List<BoardVO> listALL() throws Exception; 
+	public List<BoardVO> listALL() throws Exception;
+
+	public BoardVO read(int bno); 
 }
