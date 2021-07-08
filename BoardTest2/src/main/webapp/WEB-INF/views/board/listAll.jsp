@@ -16,7 +16,12 @@
 		<c:forEach items="${listALL }" var="boardVO">
 			<tr>
 				<td>${boardVO.bno }</td>
-				<td>${boardVO.title }</td>
+				<td>
+<!-- 				<a href="/board/read?bno=${boardVO.bno }"> -->
+				<a href="/board/read/${boardVO.bno}">
+				${boardVO.title }
+				</a>
+				</td>
 				<td>${boardVO.writer }</td>
 				<td>
 				
